@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #faf8f5;
+    color: #2d3748;
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard Variable", Pretendard, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Keyframe animations for comforting breathing and glowing */
+@keyframes pulseSlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 5s ease-in-out infinite;
+}
+
+@keyframes paperShred {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(40px) scale(0.8) rotate(5deg);
+    opacity: 0.7;
+    filter: blur(1px);
+  }
+  100% {
+    transform: translateY(120px) scale(0.2) rotate(15deg);
+    opacity: 0;
+    filter: blur(4px);
+  }
+}
+
+.animate-shred {
+  animation: paperShred 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "교사 마음 쉼터 (온기)",
+  "description": "과중한 업무와 감정 노동에 지친 선생님들을 위한 따뜻한 공감과 심리 회복 상담소",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
